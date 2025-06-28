@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>Weather App</h1>
+
+    <div class="controls">
+      <label class="unit-toggle">
+        <input type="checkbox" id="unitToggle" />
+        <span class="unit-label">°F</span>
+      </label>
+    </div>
+
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Enter city name" />
+      <button onclick="getWeather()">Search</button>
+      <button onclick="getLocationWeather()">📍 Current</button>
+    </div>
+
+    <div id="weatherInfo" class="fade"></div>
+    <div id="forecastInfo" class="forecast-section fade"></div>
+
+    <div id="historySection">
+      <div class="history-header">
+        <h3>Search History</h3>
+        <i class='bx bx-trash delete-history' onclick="clearHistory()"></i>
+      </div>
+      <ul id="searchHistory"></ul>
+    </div>
+
+    <!-- ✅ Footer section -->
+    <footer class="footer">
+      <p>&copy; 2025 Weather App | All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
